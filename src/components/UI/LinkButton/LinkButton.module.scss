@@ -1,0 +1,21 @@
+@import 'src/globalStyle/vars';
+
+.link {
+	position: relative;
+	top: 0;
+	display: inline-block;
+	padding: 6px 42px 5px;
+	font: 14px $bold;
+	border-radius: 3px;
+	border: 1px solid $title;
+	color: $title;
+	box-shadow: $textShadow;
+	&:hover {
+		background-color: $title;
+		color: $cont;
+	}
+	&:active {
+		top: 4px;
+		box-shadow: 0 0 0 transparent;
+	}
+}

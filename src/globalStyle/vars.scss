@@ -1,0 +1,47 @@
+$out: 1px solid red !important;
+$time: 0.5s ease-in-out;
+$textShadow: 0 4px 4px rgba(#000000, .25);
+
+$bg: #ffffff;
+$title: #ffffff;
+$cont: #000000;
+$desc: #000000;
+$subtext: #000000;
+$link: #000000;
+
+$reg: 'Merienda-Regular', sans-serif;
+$bold: 'Merienda-Bold', sans-serif;
+$light: Arial, sans-serif;
+$italic: Arial, sans-serif;
+
+.vis-hid {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.hid {
+	display: none;
+}
+
+.overf {
+	overflow: hidden !important;
+	//height: 100vh !important;
+	position: relative !important;
+}
+
+/*BEGIN .wrap*/
+.wrap {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+/*END.wrap*/
+
+.gb-title {
+	font-size: 24px;
+	text-align: center;
+}

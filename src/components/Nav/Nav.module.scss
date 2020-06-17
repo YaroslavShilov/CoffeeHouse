@@ -1,0 +1,60 @@
+@import 'src/globalStyle/vars';
+
+.nav  {
+	display: flex;
+	align-items: flex-end;
+	padding: 30px 0;
+	a {
+		color: $title;
+	}
+	path {
+		fill: $title;
+	}
+}
+.nav.__black {
+	a {
+		color: $cont;
+	}
+	path {
+		fill: $cont;
+	}
+	.link:before {
+		background-color: $cont;
+	}
+}
+
+.list {
+	display: flex;
+	align-items: flex-end;
+}
+
+.item {
+	margin-right: 40px;
+}
+
+.link {
+	position: relative;
+	font-size: 14px;
+	text-shadow: $textShadow;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: $title;
+		transition: all $time;
+	}
+	&:hover:before {
+		width: 100%;
+	}
+}
+
+.icon {
+	margin-right: -3px;
+	svg {
+		width: 35px;
+		height: 35px;
+	}
+}

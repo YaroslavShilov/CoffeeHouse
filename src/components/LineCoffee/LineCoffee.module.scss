@@ -1,0 +1,45 @@
+@import 'src/globalStyle/vars';
+
+.line {
+	width: 200px;
+	height: 30px;
+	margin: 0 auto;
+}
+.icon {
+	position: relative;
+	display: inline-block;
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+	path {
+		fill: $title;
+	}
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		width: 60px;
+		height: 1px;
+		background-color: $title;
+		box-shadow: 0 2px 4px rgba(#000, .3);
+	}
+	&:before {
+		right: calc(100% + 25px);
+	}
+	&:after {
+		left: calc(100% + 25px);
+	}
+}
+
+.line.__black .icon {
+	&:before,
+	&:after {
+		background-color: $cont;
+		box-shadow: none;
+	}
+	path {
+		fill: $cont;
+	}
+}

@@ -1,0 +1,50 @@
+@import 'src/globalStyle/vars';
+
+.about {
+	padding: 80px;
+	background-color: white;
+	color: $cont;
+}
+
+.about:hover .img {
+	box-shadow: 5px 5px 30px rgba(#000, .25);
+	filter: sepia(0%);
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.img {
+	flex: 0 0 272px;
+	height: 355px;
+	margin-right: 80px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	box-shadow: -5px 5px 30px rgba(#000, .25);
+	filter: sepia(100%);
+	transition: all $time;
+}
+
+.cont {
+	max-width: 590px;
+	text-align: center;
+}
+
+.title {
+	margin-bottom: 20px;
+}
+
+.desc {
+	padding-top: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	p {
+		margin: 15px 0;
+	}
+}

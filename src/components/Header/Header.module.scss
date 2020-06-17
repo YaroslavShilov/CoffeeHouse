@@ -1,0 +1,14 @@
+@import 'src/globalStyle/vars';
+
+.header {
+	padding: 0 0 74px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.title {
+	padding-top: 34px;
+	color: $title;
+	font: 40px $bold;
+	text-align: center;
+}
