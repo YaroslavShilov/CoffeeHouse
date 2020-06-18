@@ -3,11 +3,15 @@ import s from './BestItem.module.scss';
 
 const BestItem = ({img, name, price}) => {
 	return (
-		<div className={s.item}>
-			<img className={s.img} src={img} alt={name}/>
+		<a className={s.item} href={'#'}>
+			<div className={s.img}>
+				<img src={img} alt={name}/>
+			</div>
 			<h3 className={s.name}>{name}</h3>
-			<p className={s.price}>{price}$</p>
-		</div>
+			<p className={s.price}>
+				<strong>{price}</strong>
+			</p>
+		</a>
 	);
 }
 

@@ -1,0 +1,56 @@
+@import "src/globalStyle/vars";
+
+.item {
+	width: 225px;
+	height: 240px;
+	margin: 35px;
+	padding: 22px;
+	background-color: rgba($title, .65);
+	border-radius: 8px;
+	color: $cont;
+	text-align: center;
+	&:hover {
+		background-color: $title;
+		box-shadow: $textShadow;
+	}
+	&:hover .price strong:before {
+		width: calc(100% + 7px);
+	}
+}
+
+.img {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	max-width: 167px;
+	height: 130px;
+	margin: 0 auto 14px;
+	img {
+		max-height: 100%;
+	}
+}
+
+.name {
+	margin-bottom: 12px;
+	font-size: 14px;
+}
+
+.price {
+	font: 14px $bold;
+	text-align: right;
+	strong {
+		position: relative;
+		display: inline-block;
+	}
+	strong:before {
+		content: "";
+		position: absolute;
+		top: 100%;
+		right: 0;
+		width: 0;
+		height: 1px;
+		background-color: $cont;
+		transition: all $time;
+	}
+}

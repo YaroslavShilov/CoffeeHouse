@@ -1,4 +1,11 @@
 .best {
+	padding: 90px 0 70px;
 	background: url("img/bg.jpg") center center no-repeat;
 	background-size: cover;
+}
+
+.items {
+	display: flex;
+	justify-content: center;
+	padding-top: 5px;
 }

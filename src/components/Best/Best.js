@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './Best.module.scss';
 import BestItem from "./BestItem/BestItem";
-
+import nextId from "react-id-generator";
+ 
 const Best = (props) => {
 	
 	const dataList = [
@@ -23,7 +24,7 @@ const Best = (props) => {
 	]
 	
 	const items = dataList.map(item => 
-		<BestItem img={item.url} name={item.name} price={item.price}/>
+		<BestItem key={nextId()} img={item.url} name={item.name} price={item.price}/>
 	)
 	
 	return (

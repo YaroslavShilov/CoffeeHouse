@@ -2,7 +2,7 @@ import React from 'react';
 import s from './About.module.scss';
 import LineCoffee from "../LineCoffee/LineCoffee";
 
-const About = ({label, img, children}) => {
+const About = ({title, img, children}) => {
 	
 	const imgBlock = (
 		img && <div className={s.img} style={{backgroundImage: `url(${img})`}}/>	
@@ -16,7 +16,7 @@ const About = ({label, img, children}) => {
 					{imgBlock}
 					
 					<div className={s.cont}>
-						<h2 className={`gb-title ${s.title}`}>{label}</h2>
+						<h2 className={`gb-title ${s.title}`}>{title}</h2>
 						<LineCoffee modif={'__black'}/>
 						<div className={s.desc}>
 							{children}

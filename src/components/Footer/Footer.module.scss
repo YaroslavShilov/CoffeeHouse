@@ -1,0 +1,12 @@
+@import "src/globalStyle/vars";
+
+.footer {
+	padding-bottom: 20px;
+	background-color: $title;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

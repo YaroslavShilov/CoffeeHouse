@@ -27,7 +27,9 @@
 	display: flex;
 	align-items: flex-end;
 }
-
+.list .item:last-child {
+	margin-right: 0;
+}
 .item {
 	margin-right: 40px;
 }
