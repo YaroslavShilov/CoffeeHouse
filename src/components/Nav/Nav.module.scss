@@ -11,12 +11,16 @@
 		fill: $title;
 	}
 }
+
 .nav.__black {
 	a {
 		color: $cont;
 	}
 	path {
 		fill: $cont;
+	}
+	.link {
+		text-shadow: none;
 	}
 	.link:before {
 		background-color: $cont;

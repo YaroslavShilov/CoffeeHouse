@@ -1,0 +1,17 @@
+@import "src/globalStyle/vars";
+
+.coffee {
+	position: relative;
+	background-color: $title;
+	padding-top: 61px;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 240px;
+		height: 1px;
+		margin-left: -120px;
+		background-color: $cont;
+	}
+}

@@ -1,19 +1,13 @@
 import React from 'react';
-import s from './App.module.scss'
 import Header from "../components/Header/Header";
-import MainSection from "../components/MainSection/MainSection";
 import About from "../components/About/About";
-import AboutOurBeans from "../components/About/img/aboutOurBeans.jpg"
-import Best from "../components/Best/Best";
-import Footer from "../components/Footer/Footer";
+import AboutOurBeans from "../img/aboutOurBeans.jpg";
+import Coffee from "../components/Coffee/Coffee";
 
-const App = (props) => {
+const OurCoffee = () => {
 	return (
-		<div className={s.app}>
-			<div>
-				
-				<Header title={'Our Coffee'}/>
-				{/*
+		<>
+			<Header title={'Our Coffee'}/>
 			<About label={'About Us'} img={AboutOurBeans}>
 				<p>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
 					Afraid at highly months do things on at. Situation recommend objection do intention
@@ -29,12 +23,9 @@ const App = (props) => {
 					repair day ladies now.
 				</p>
 			</About>
-			*/}
-				{/*<Best/>*/}
-			</div>
-			<Footer/>
-		</div>
+			<Coffee/>
+		</>
 	);
 }
 
-export default App
+export default OurCoffee

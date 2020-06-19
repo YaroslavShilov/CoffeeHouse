@@ -2,19 +2,20 @@ import React from 'react';
 import s from './Nav.module.scss';
 import nextId from "react-id-generator";
 import IconCoffee from "./icon/IconCoffee";
+import {Link} from "react-router-dom";
 
 const Nav = ({modif=''}) => {
 	
 	const dataList = [
-		{label: 'Coffee house', link: '#'},
-		{label: 'Our coffee', link: '#'},
-		{label: 'For your pleasure', link: '#'},
+		{label: 'Coffee house', link: ''},
+		{label: 'Our coffee', link: 'ourcoffee'},
+		{label: 'For your pleasure', link: 'pleasure'},
 	];
 	
 	const list = dataList.map((item) => {
 		return (
 			<li className={s.item} key={nextId()}>
-				<a href={item.link} className={s.link}>{item.label}</a>
+				<Link to={`/${item.link}`} className={s.link}>{item.label}</Link>
 			</li>
 		)
 	})

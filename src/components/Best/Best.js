@@ -31,9 +31,9 @@ const Best = (props) => {
 		<section className={s.best}>
 			<div className="wrap">
 				<h2 className={`gb-title`}>Our best</h2>
-				<div className={s.items}>
+				<ul className={s.items}>
 					{items}
-				</div>
+				</ul>
 			</div>
 		</section>
 	);

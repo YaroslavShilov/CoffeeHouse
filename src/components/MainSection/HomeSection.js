@@ -1,10 +1,10 @@
 import React from 'react';
-import s from './MainSection.module.scss';
+import s from './HomeSection.module.scss';
 import LineCoffee from "../LineCoffee/LineCoffee";
 import Nav from "../Nav/Nav";
 import LinkButton from "../UI/LinkButton/LinkButton";
 
-const MainSection = () => {
+const HomeSection = () => {
 	return (
 		<section className={s.bg}>
 			<div className="wrap">
@@ -25,4 +25,4 @@ const MainSection = () => {
 	);
 }
 
-export default MainSection
+export default HomeSection

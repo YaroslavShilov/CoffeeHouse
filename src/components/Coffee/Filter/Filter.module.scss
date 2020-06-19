@@ -1,0 +1,73 @@
+@import "src/globalStyle/vars";
+
+.filter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+	>div:not(:last-child) {
+		margin-right: 80px;
+	}	
+}
+
+.search,
+.filters {
+	display: flex;
+	align-items: center;
+}
+
+.label {
+	font-size: 16px;
+	margin-right: 25px;
+}
+
+.button label,
+.input {
+	display: inline-block;
+	height: 32px;
+	font: 14px $reg;
+	text-align: center;
+	background-color: $title;
+	box-shadow: 4px 4px 20px rgba($cont, .25);
+	transition: all $time;
+	&:hover {
+		box-shadow: 2px 2px 10px rgba($cont, .25);
+	}
+}
+
+.input {
+	width: 190px;
+	border: none;
+	border-radius: 4px;
+	&:active,
+	&:focus {
+		box-shadow: 0 0 3px rgba($cont, .25);
+	}
+}
+
+.buttons {
+	display: flex;
+	.button:not(:first-child) {
+		margin-left: 5px;
+	}
+	.button:first-child label {
+		border-radius: 4px 0 0 4px;
+	}
+	.button:last-child label {
+		border-radius: 0 4px 4px 0;
+	}
+}
+
+.button {
+	label {
+		padding: 6px 10px 0;
+		text-align: center;
+		cursor: pointer;
+	}
+	input {
+		display: none;
+	}
+	input:checked + label {
+		box-shadow: 0 0 3px rgba($cont, .25);
+	}
+}
