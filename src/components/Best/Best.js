@@ -1,29 +1,20 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import s from './Best.module.scss';
 import BestItem from "./BestItem/BestItem";
 import nextId from "react-id-generator";
+import {ServerContext} from "../../context/server/serverContext";
+import Loader from "../Loader/Loader";
  
-const Best = (props) => {
+const Best = () => {
 	
-	const dataList = [
-		{
-			"name": "Solimo Coffee Beans 2 kg",
-			"url": "https://images-na.ssl-images-amazon.com/images/I/815O9ktyfUL._SL1500_.jpg",
-			"price": "10.73$"
-		},
-		{
-			"name": "Presto Coffee Beans 1 kg",
-			"url": "https://images-na.ssl-images-amazon.com/images/I/91Ryk2gKejL._SL1500_.jpg",
-			"price": "15.99$"
-		},
-		{
-			"name": "AROMISTICO Coffee 1 kg",
-			"url": "https://images-na.ssl-images-amazon.com/images/I/71qBQnpQFYL._SL1500_.jpg",
-			"price": "6.99$"
-		}
-	]
+	const {loading, fetchItems, bestsellers} = useContext(ServerContext);
 	
-	const items = dataList.map(item => 
+	useEffect(() => {
+		fetchItems('bestsellers')
+		// eslint-disable-next-line
+	}, [])
+	
+	const items = bestsellers.map(item => 
 		<BestItem key={nextId()} img={item.url} name={item.name} price={item.price}/>
 	)
 	
@@ -31,9 +22,12 @@ const Best = (props) => {
 		<section className={s.best}>
 			<div className="wrap">
 				<h2 className={`gb-title`}>Our best</h2>
-				<ul className={s.items}>
-					{items}
-				</ul>
+				{
+					loading
+					? <Loader/>
+					: <ul className={s.items}>{items}</ul>
+				}
+				
 			</div>
 		</section>
 	);

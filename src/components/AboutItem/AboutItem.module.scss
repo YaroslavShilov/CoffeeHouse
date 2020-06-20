@@ -1,0 +1,52 @@
+@import 'src/globalStyle/vars';
+
+.aboutit {
+	padding: 70px 0 30px;
+	background-color: white;
+	color: $cont;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 870px;
+	margin: 0 auto;
+}
+
+.img {
+	flex: 0 0 392px;
+	margin-right: 55px;
+	text-align: center;
+	img {
+		box-shadow: 5px 5px 30px rgba(#000, .25);
+	}
+}
+
+.cont {
+	width: 100%;
+	max-width: 430px;
+	text-align: left;
+}
+
+.title {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.desc {
+	padding-top: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	li {
+		margin: 15px 0;
+	}
+	strong {
+		font-weight: $bold;
+	}
+}
+
+.price {
+	margin-left: 5px;
+	font-size: 24px;
+}

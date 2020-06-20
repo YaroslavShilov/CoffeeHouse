@@ -16,7 +16,7 @@ const HomeSection = () => {
 						<p>We makes every day full of energy and taste</p>
 						<p>Want to try our beans?</p>
 					</div>
-					<LinkButton href={'#'} traget={'_blank'}>More</LinkButton>
+					<LinkButton href={'/ourcoffee'}>More</LinkButton>
 				</div>
 
 

@@ -19,10 +19,10 @@
 	path {
 		fill: $cont;
 	}
-	.link {
+	.item a {
 		text-shadow: none;
 	}
-	.link:before {
+	.item a:before {
 		background-color: $cont;
 	}
 }
@@ -30,6 +30,7 @@
 .list {
 	display: flex;
 	align-items: flex-end;
+	padding: 10px 0 0 35px;
 }
 .list .item:last-child {
 	margin-right: 0;
@@ -37,8 +38,7 @@
 .item {
 	margin-right: 40px;
 }
-
-.link {
+.item a {
 	position: relative;
 	font-size: 14px;
 	text-shadow: $textShadow;
@@ -58,7 +58,9 @@
 }
 
 .icon {
-	margin-right: -3px;
+	position: absolute;
+	bottom: 0;
+	right: 100%;
 	svg {
 		width: 35px;
 		height: 35px;

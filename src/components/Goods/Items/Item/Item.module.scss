@@ -11,6 +11,7 @@
 	box-shadow: 5px 5px 15px rgba(#000, .25);
 	color: $cont;
 	text-align: right;
+	transition: all $time;
 	&:hover {
 		box-shadow: 0 0 3px rgba($cont, .25);
 	}
