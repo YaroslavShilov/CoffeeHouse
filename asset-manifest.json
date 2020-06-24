@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/CoffeeHouse/static/css/main.70c7756d.chunk.css",
+    "main.js": "/CoffeeHouse/static/js/main.92dea95a.chunk.js",
+    "main.js.map": "/CoffeeHouse/static/js/main.92dea95a.chunk.js.map",
+    "runtime-main.js": "/CoffeeHouse/static/js/runtime-main.9f0bb6fa.js",
+    "runtime-main.js.map": "/CoffeeHouse/static/js/runtime-main.9f0bb6fa.js.map",
+    "static/js/2.31385e89.chunk.js": "/CoffeeHouse/static/js/2.31385e89.chunk.js",
+    "static/js/2.31385e89.chunk.js.map": "/CoffeeHouse/static/js/2.31385e89.chunk.js.map",
+    "index.html": "/CoffeeHouse/index.html",
+    "precache-manifest.728959fd1f6e65242020131fc76dbfcd.js": "/CoffeeHouse/precache-manifest.728959fd1f6e65242020131fc76dbfcd.js",
+    "service-worker.js": "/CoffeeHouse/service-worker.js",
+    "static/css/main.70c7756d.chunk.css.map": "/CoffeeHouse/static/css/main.70c7756d.chunk.css.map",
+    "static/js/2.31385e89.chunk.js.LICENSE.txt": "/CoffeeHouse/static/js/2.31385e89.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/CoffeeHouse/static/media/Merienda-Regular.47a69df0.ttf",
+    "static/media/aboutOurBeans.jpg": "/CoffeeHouse/static/media/aboutOurBeans.c8b9f1eb.jpg",
+    "static/media/aboutOurGoods.jpg": "/CoffeeHouse/static/media/aboutOurGoods.b030a81d.jpg",
+    "static/media/HomeSection.module.scss": "/CoffeeHouse/static/media/bg.59731da7.jpg",
+    "static/media/Best.module.scss": "/CoffeeHouse/static/media/bg.b69bd070.jpg",
+    "static/media/bg.jpg": "/CoffeeHouse/static/media/bg.d4775bf3.jpg",
+    "static/media/pleasurePage.jpg": "/CoffeeHouse/static/media/pleasurePage.fdf0f46a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9f0bb6fa.js",
+    "static/js/2.31385e89.chunk.js",
+    "static/css/main.70c7756d.chunk.css",
+    "static/js/main.92dea95a.chunk.js"
+  ]
+}
