@@ -3,18 +3,21 @@ import s from './App.module.scss'
 import Footer from "./components/Footer/Footer";
 import Main from "./components/Main/Main";
 import Preloader from "./components/Preloader/Preloader";
-import {BrowserRouter} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import ServerState from "./context/server/ServerState";
 
+
+//**TODO: need to do adaptive**/
+//**TODO: need change json-server**/
 const App = () => (
 	<ServerState>
-		<BrowserRouter>
+		<HashRouter>
 			<div className={s.app}>
 				<Preloader/>
 				<Main/>
 				<Footer/>
 			</div>
-		</BrowserRouter>
+		</HashRouter>
 	</ServerState>
 );
 
