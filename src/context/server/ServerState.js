@@ -2,7 +2,7 @@ import React, {useReducer} from 'react';
 import {ServerContext} from "./serverContext";
 import {serverReducer} from "./serverReducer";
 import {FETCH_ITEMS, HIDE_LOADER, SHOW_LOADER} from "../types";
-import {URL} from "../../API/URL";
+import {URL} from "../../API/API";
 
 const ServerState = ({children}) => {
 	const initialState = {
@@ -22,7 +22,7 @@ const ServerState = ({children}) => {
 			return hideLoader();
 		}
 		showLoader();
-		const res = await fetch(`${URL}/${category}`)
+		const res = await fetch(`${URL}/${category}.json`)
 		const data = await res.json();
 		dispatch({type: FETCH_ITEMS, category, items: data})
 		hideLoader();

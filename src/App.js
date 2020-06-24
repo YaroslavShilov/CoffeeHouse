@@ -8,7 +8,6 @@ import ServerState from "./context/server/ServerState";
 
 
 //**TODO: need to do adaptive**/
-//**TODO: need change json-server**/
 const App = () => (
 	<ServerState>
 		<HashRouter>
