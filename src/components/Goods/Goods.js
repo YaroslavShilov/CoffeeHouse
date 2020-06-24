@@ -1,14 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Filter from "./Filter/Filter";
 import Items from "./Items/Items";
 import s from './Goods.module.scss';
+import Loader from "../Loader/Loader";
 
-const Goods = ({list, showFilter, link}) => {
+const Goods = ({list, isFilter, isLink, loading}) => {
 	
 	const [state, setState] = useState({
 		search: '',
 		filter: [],
+		loading: true,
 	})
+	
+	useEffect(() => {
+		setState({...state, loading,})
+		// eslint-disable-next-line
+	}, [loading])
 	
 	const filter = (filter) => {
 		if(state.filter.indexOf(filter) === -1) {
@@ -66,8 +73,13 @@ const Goods = ({list, showFilter, link}) => {
 	return (
 		<section className={s.coffee}>
 			<div className="wrap">
-				{showFilter && <Filter {...{countries, filter, search}}/>}
-				<Items list={visibleList} link={link}/>
+				{isFilter && <Filter {...{countries, filter, search}}/>}
+				{
+					state.loading
+					? <Loader/>
+					: <Items list={visibleList} isLink={isLink}/>
+				}
+				
 			</div>			
 		</section>
 	);

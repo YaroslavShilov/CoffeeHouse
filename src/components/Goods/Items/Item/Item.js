@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Item.module.scss';
 import {Link} from "react-router-dom";
 
-const Item = ({img, name, country, price, link}) => {
+const Item = ({img, name, country, price, isLink}) => {
 	const urlName = name.toLowerCase().replace(/\s+/g, '');
 	
 	const ViewLink = ({children}) => (
@@ -30,7 +30,7 @@ const Item = ({img, name, country, price, link}) => {
 		</>
 	)
 	
-	const content = link ? <ViewLink><ViewMain/></ViewLink> : <ViewBlock><ViewMain/></ViewBlock>
+	const content = isLink ? <ViewLink><ViewMain/></ViewLink> : <ViewBlock><ViewMain/></ViewBlock>
 	
 	return (
 		<li>

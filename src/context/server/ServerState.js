@@ -18,6 +18,9 @@ const ServerState = ({children}) => {
 	const hideLoader = () => dispatch({type: HIDE_LOADER})
 	
 	const fetchItems = async (category) => {
+		if(state[category].length > 1) {
+			return hideLoader();
+		}
 		showLoader();
 		const res = await fetch(`${URL}/${category}`)
 		const data = await res.json();

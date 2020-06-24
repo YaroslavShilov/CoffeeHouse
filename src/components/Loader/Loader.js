@@ -10,7 +10,7 @@ const Loader = ({absolute}) => {
 	return (
 		<div className={`${s.loader} ${modif}`}>
 			<div className={s.icon}>
-				<img className={s.coffee} src={IconCoffee} alt="Goods"/>
+				<img className={s.coffee} src={IconCoffee} alt="Coffee"/>
 				<div className={s.load}/>
 				<img className={s.cup} src={IconCup} alt="Cup"/>
 			</div>
