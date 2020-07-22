@@ -49,3 +49,21 @@
 		margin: 15px 0;
 	}
 }
+
+/* BEGIN max-width: 900px */
+@media only screen and (max-width: 900px) {
+	.about {
+		padding: 80px 0;
+	}
+	.main {
+		flex-direction: column;
+	}
+	
+	.img {
+		flex: 1 0 355px;
+		width: 272px;
+		margin: 0 0 60px;
+	}
+
+}
+/* END max-width: 900px */

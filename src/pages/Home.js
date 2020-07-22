@@ -1,12 +1,12 @@
 import React from 'react';
-import HomeSection from "../components/MainSection/HomeSection";
-import About from "../components/About/About";
+import HomeSection from "../components/HomeSection/HomeSection";
+import AboutSection from "../components/AboutSection/AboutSection";
 import Best from "../components/Best/Best";
 
 const Home = () => (
 	<>
 		<HomeSection/>
-		<About title={'About Us'}>
+		<AboutSection title={'About Us'}>
 			<p>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
 				Afraid at highly months do things on at. Situation recommend objection do intention
 				so questions. As greatly removed calling pleased improve an. Last ask him cold feel
@@ -20,7 +20,7 @@ const Home = () => (
 				recommend. Did even but nor are most gave hope. Secure active living depend son
 				repair day ladies now.
 			</p>
-		</About>
+		</AboutSection>
 		<Best/>
 	</>
 );

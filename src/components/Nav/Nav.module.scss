@@ -66,3 +66,14 @@
 		height: 35px;
 	}
 }
+
+/* BEGIN max-width: 500px */
+@media only screen and (max-width: 500px) {
+
+	.item {
+		margin-right: 15px;
+		font-size: 13px;
+	}
+  
+}
+/* END max-width: 500px */

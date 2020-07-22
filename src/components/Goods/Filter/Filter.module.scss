@@ -4,7 +4,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 30px;
+	flex-wrap: wrap;
+	>div {
+		margin-bottom: 30px;
+	}
 	>div:not(:last-child) {
 		margin-right: 80px;
 	}	
@@ -71,3 +74,15 @@
 		box-shadow: 0 0 3px rgba($cont, .25);
 	}
 }
+
+/* BEGIN max-width: 750px */
+@media only screen and (max-width: 750px) {
+  .filter {
+	  flex-direction: column;
+	  > div:not(:last-child) {
+		  margin-right: 0;
+	  }
+  }
+  
+}
+/* END max-width: 750px */

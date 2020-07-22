@@ -1,8 +1,8 @@
 import React from 'react';
-import s from './About.module.scss';
+import s from './AboutSection.module.scss';
 import LineCoffee from "../LineCoffee/LineCoffee";
 
-const About = ({title, img, children}) => {
+const AboutSection = ({title, img, children}) => {
 	
 	const imgBlock = (
 		img && <div className={s.img} style={{backgroundImage: `url(${img})`}}/>	
@@ -30,4 +30,4 @@ const About = ({title, img, children}) => {
 	);
 }
 
-export default About
+export default AboutSection

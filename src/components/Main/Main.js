@@ -4,6 +4,7 @@ import Home from "../../pages/Home";
 import OurCoffee from "../../pages/OurCoffee";
 import Pleasure from "../../pages/Pleasure";
 import AboutIt from "../../pages/AboutIt";
+import Page404 from "../../pages/Page404/Page404";
 
 const Main = () => {
 	
@@ -14,7 +15,7 @@ const Main = () => {
 				<Route path={'/ourcoffee'} component={OurCoffee}/>
 				<Route path={'/pleasure'} component={Pleasure}/>
 				<Route path={'/aboutit'} component={AboutIt}/>
-				{/*404page<Route path={'/'} component={Home}/>*/}
+				<Route path={'/'} component={Page404}/>
 			</Switch>
 
 		</main>

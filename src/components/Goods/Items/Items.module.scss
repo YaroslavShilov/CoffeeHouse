@@ -3,3 +3,13 @@
 	justify-content: center;
 	flex-wrap: wrap;
 }
+
+/* BEGIN max-width: 900px */
+@media only screen and (max-width: 900px) {
+
+	.items {
+		padding: 20px 0 30px;
+	}
+
+}
+/* END max-width: 900px */

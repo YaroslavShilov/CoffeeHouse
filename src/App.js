@@ -6,8 +6,6 @@ import Preloader from "./components/Preloader/Preloader";
 import {HashRouter} from "react-router-dom";
 import ServerState from "./context/server/ServerState";
 
-
-//**TODO: need to do adaptive**/
 const App = () => (
 	<ServerState>
 		<HashRouter>

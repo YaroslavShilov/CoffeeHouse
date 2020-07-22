@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import Header from "../components/Header/Header";
-import About from "../components/About/About";
+import AboutSection from "../components/AboutSection/AboutSection";
 import AboutOurBeans from "../img/aboutOurBeans.jpg";
 import Goods from "../components/Goods/Goods";
 import {ServerContext} from "../context/server/serverContext";
@@ -17,7 +17,7 @@ const OurCoffee = () => {
 	return (
 		<>
 			<Header title={'Our Coffee'}/>
-			<About title={'About Us'} img={AboutOurBeans}>
+			<AboutSection title={'About Us'} img={AboutOurBeans}>
 				<p>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
 				</p>
 				<p>
@@ -30,7 +30,7 @@ const OurCoffee = () => {
 					met spot shy want. Children me laughing we prospect answered followed. At it went
 					is song that held help face.
 				</p>
-			</About>
+			</AboutSection>
 			<Goods isFilter isLink list={coffee} loading={loading}/>
 		</>
 	);

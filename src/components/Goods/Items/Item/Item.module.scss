@@ -43,3 +43,13 @@
 .price {
 	font: 14px $bold;
 }
+
+/* BEGIN max-width: 900px */
+@media only screen and (max-width: 900px) {
+
+	.item {
+		margin: 15px;
+	}
+
+}
+/* END max-width: 900px */

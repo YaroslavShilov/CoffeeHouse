@@ -4,7 +4,7 @@
 	display: block;
 	width: 225px;
 	height: 240px;
-	margin: 35px;
+	margin: 20px 35px 35px;
 	padding: 22px;
 	background-color: rgba($title, .65);
 	border-radius: 8px;
@@ -55,3 +55,13 @@
 		transition: all $time;
 	}
 }
+
+/* BEGIN max-width: 900px */
+@media only screen and (max-width: 900px) {
+	
+	.item {
+		margin: 20px 12px 12px;
+	}
+
+}
+/* END max-width: 900px */
