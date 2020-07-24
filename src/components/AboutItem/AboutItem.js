@@ -5,7 +5,7 @@ import {ServerContext} from "../../context/server/serverContext";
 import Loader from "../Loader/Loader";
 import {Redirect} from "react-router";
 
-const AboutItem = ({match}) => {
+const AboutItem = ({url}) => {
 	const [item, setItem] = useState([]);
 	const {loading, fetchItems, coffee} = useContext(ServerContext);
 	
@@ -15,10 +15,10 @@ const AboutItem = ({match}) => {
 		} else {
 			setItem(() => coffee.find(({name}) => {
 				const convertName = name.toLowerCase().replace(/\s+/g, '');
-				return match.params.name === convertName;
+				return url === convertName;
 			}));
 		}
-	}, [coffee, setItem, match.params.name, fetchItems])
+	}, [coffee, setItem, url, fetchItems])
 
 	if(!item) return <Redirect to={'/page404'}/>
 

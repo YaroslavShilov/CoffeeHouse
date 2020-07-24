@@ -1,13 +1,12 @@
 import React from 'react';
 import Header from "../components/Header/Header";
 import AboutItem from "../components/AboutItem/AboutItem";
-import {Route} from "react-router";
 
-const AboutIt = () => {
+const AboutIt = ({match}) => {
 	return (
 		<>
 			<Header title={'Our Coffee'}/>
-			<Route path={'/aboutit/:name'} component={AboutItem}/>
+			<AboutItem url={match.params.name}/>
 		</>
 	);
 }

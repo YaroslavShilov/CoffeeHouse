@@ -26,6 +26,7 @@ const ServerState = ({children}) => {
 		const data = await res.json();
 		dispatch({type: FETCH_ITEMS, category, items: data})
 		hideLoader();
+		// eslint-disable-next-line
 	}, []);
 	
 	
