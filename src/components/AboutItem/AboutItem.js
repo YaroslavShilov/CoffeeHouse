@@ -18,10 +18,8 @@ const AboutItem = ({match}) => {
 				return match.params.name === convertName;
 			}));
 		}
-		// eslint-disable-next-line
 	}, [coffee, setItem, match.params.name, fetchItems])
 
-	//**TODO: we have bug with the first fetching**/
 	if(!item) return <Redirect to={'/page404'}/>
 
 	
