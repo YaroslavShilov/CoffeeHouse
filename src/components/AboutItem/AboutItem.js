@@ -10,13 +10,13 @@ const AboutItem = ({url}) => {
 	const {loading, fetchItems, coffee} = useContext(ServerContext);
 	
 	useEffect(() => {
-		if(coffee.length < 1) {
-			fetchItems('coffee')
-		} else {
+		if(coffee.length > 0) {
 			setItem(() => coffee.find(({name}) => {
 				const convertName = name.toLowerCase().replace(/\s+/g, '');
 				return url === convertName;
 			}));
+		} else {
+			fetchItems('coffee')
 		}
 	}, [coffee, setItem, url, fetchItems])
 
