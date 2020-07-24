@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react';
+import React, {useCallback, useReducer} from 'react';
 import {ServerContext} from "./serverContext";
 import {serverReducer} from "./serverReducer";
 import {FETCH_ITEMS, HIDE_LOADER, SHOW_LOADER} from "../types";
@@ -17,7 +17,7 @@ const ServerState = ({children}) => {
 	const showLoader = () => dispatch({type: SHOW_LOADER})
 	const hideLoader = () => dispatch({type: HIDE_LOADER})
 	
-	const fetchItems = async (category) => {
+	const fetchItems = useCallback(async (category) => {
 		if(state[category].length > 1) {
 			return hideLoader();
 		}
@@ -26,7 +26,7 @@ const ServerState = ({children}) => {
 		const data = await res.json();
 		dispatch({type: FETCH_ITEMS, category, items: data})
 		hideLoader();
-	}
+	}, []);
 	
 	
 	return (

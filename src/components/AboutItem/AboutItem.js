@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import s from "./AboutItem.module.scss";
 import LineCoffee from "../LineCoffee/LineCoffee";
 import {ServerContext} from "../../context/server/serverContext";
@@ -6,24 +6,25 @@ import Loader from "../Loader/Loader";
 import {Redirect} from "react-router";
 
 const AboutItem = ({match}) => {
-
+	const [item, setItem] = useState([]);
 	const {loading, fetchItems, coffee} = useContext(ServerContext);
-
+	
 	useEffect(() => {
-		fetchItems('coffee')
+		if(coffee.length < 1) {
+			fetchItems('coffee')
+		} else {
+			setItem(() => coffee.find(({name}) => {
+				const convertName = name.toLowerCase().replace(/\s+/g, '');
+				return match.params.name === convertName;
+			}));
+		}
 		// eslint-disable-next-line
-	}, [])
+	}, [coffee, setItem, match.params.name, fetchItems])
 
-	const urlName = match.params.name;
-
-	const item = coffee.find(({name}) => {
-		const convertName = name.toLowerCase().replace(/\s+/g, '');
-		return urlName === convertName;
-	})
+	//**TODO: we have bug with the first fetching**/
+	if(!item) return <Redirect to={'/page404'}/>
 
 	
-	if(!loading && !item) return <Redirect to={'/page404'}/>
-
 	return (
 		<section className={s.aboutit}>
 			<div className="wrap">
