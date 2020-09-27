@@ -2,11 +2,15 @@
   "name": "CoffeeHouse",
   "version": "0.1.0",
   "private": true,
-	"homepage": "http://YaroslavShilov.github.io/CoffeeHouse",
+  "homepage": "http://YaroslavShilov.github.io/CoffeeHouse",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
     "json-server": "^0.16.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -14,14 +18,15 @@
     "react-id-generator": "^3.0.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "typescript": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-	  "predeploy": "yarn run build",
-	  "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
