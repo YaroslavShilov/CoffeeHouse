@@ -5,6 +5,7 @@ import PleasureImg from "../img/pleasurePage.jpg";
 import AboutOurGoods from "../img/aboutOurGoods.jpg";
 import Goods from "../components/Goods/Goods";
 import { ServerContext } from "../context/server/serverContext";
+import Preloader from "../components/Preloader/Preloader";
 
 const Pleasure: React.FC = () => {
   const { fetchItems, goods, loading } = useContext(ServerContext);
@@ -14,7 +15,7 @@ const Pleasure: React.FC = () => {
   }, [fetchItems]);
 
   return (
-    <>
+    <Preloader>
       <Header title={"For your pleasure"} bgImg={PleasureImg} />
       <AboutSection title={"About our goods"} img={AboutOurGoods}>
         <p>
@@ -32,7 +33,7 @@ const Pleasure: React.FC = () => {
         </p>
       </AboutSection>
       <Goods list={goods} loading={loading} />
-    </>
+    </Preloader>
   );
 };
 

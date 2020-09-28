@@ -51,7 +51,7 @@
 
 .load {
 	background-color: $title;
-	animation: loading 2s infinite;
+	animation: loading 0.8s infinite;
 }
 
 @keyframes loading {

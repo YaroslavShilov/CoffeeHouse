@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Preloader.module.scss";
 import Loader from "../Loader/Loader";
 
-const Preloader: React.FC = () => (
-  <div className={s.bg}>
-    <Loader absolute={true} />
-  </div>
-);
+type Props = {
+  children: React.ReactNode;
+};
+
+const Preloader: React.FC<Props> = ({ children }) => {
+  const [loadingPage, setLoadingPage] = useState(true);
+
+  useEffect(() => {
+    setLoadingPage(false);
+  }, []);
+
+  const classes = loadingPage ? s.bg : `${s.bg} ${s.__hide}`;
+
+  return (
+    <>
+      <div className={classes}>
+        <Loader absolute={true} />
+      </div>
+      {children}
+    </>
+  );
+};
 
 export default Preloader;

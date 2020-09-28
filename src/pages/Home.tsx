@@ -2,9 +2,10 @@ import React from "react";
 import HomeSection from "../components/HomeSection/HomeSection";
 import AboutSection from "../components/AboutSection/AboutSection";
 import Best from "../components/Best/Best";
+import Preloader from "../components/Preloader/Preloader";
 
 const Home: React.FC = () => (
-  <>
+  <Preloader>
     <HomeSection />
     <AboutSection title={"About Us"}>
       <p>
@@ -24,7 +25,7 @@ const Home: React.FC = () => (
       </p>
     </AboutSection>
     <Best />
-  </>
+  </Preloader>
 );
 
 export default Home;

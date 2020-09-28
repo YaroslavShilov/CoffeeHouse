@@ -9,10 +9,13 @@
 	height: 100vh;
 	background-color: $title;
 	transition: all $time;
-	animation: finish 1s ease-in-out 1s 1 forwards;
+	overflow: hidden;
+	&.__hide {
+		animation: hide 0.9s ease-in-out 0s 1 forwards;
+	}
 }
 
-@keyframes finish {
+@keyframes hide {
 	0% {
 		opacity: 1;
 		overflow: visible;

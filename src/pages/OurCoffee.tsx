@@ -4,6 +4,7 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import AboutOurBeans from "../img/aboutOurBeans.jpg";
 import Goods from "../components/Goods/Goods";
 import { ServerContext } from "../context/server/serverContext";
+import Preloader from "../components/Preloader/Preloader";
 
 const OurCoffee: React.FC = () => {
   const { loading, fetchItems, coffee } = useContext(ServerContext);
@@ -13,7 +14,7 @@ const OurCoffee: React.FC = () => {
   }, [fetchItems]);
 
   return (
-    <>
+    <Preloader>
       <Header title={"Our Coffee"} />
       <AboutSection title={"About Us"} img={AboutOurBeans}>
         <p>
@@ -31,7 +32,7 @@ const OurCoffee: React.FC = () => {
         </p>
       </AboutSection>
       <Goods isFilter isLink list={coffee} loading={loading} />
-    </>
+    </Preloader>
   );
 };
 
