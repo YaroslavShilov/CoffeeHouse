@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3e9d193723a029ad941a8a577e7ba26a",
+    "revision": "3dfccf98b3f3de4e74740f100088db8f",
     "url": "/CoffeeHouse/index.html"
   },
   {
-    "revision": "2a5c4a57cad87e61018a",
-    "url": "/CoffeeHouse/static/css/main.3c3e5065.chunk.css"
+    "revision": "f0b1ed754c1fd15939dc",
+    "url": "/CoffeeHouse/static/css/main.b850a7a7.chunk.css"
   },
   {
-    "revision": "393d8a7629a4ec09545c",
-    "url": "/CoffeeHouse/static/js/2.334fc1c9.chunk.js"
+    "revision": "bb508b02d05b85a8601b",
+    "url": "/CoffeeHouse/static/js/2.b1c4ecfc.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/CoffeeHouse/static/js/2.334fc1c9.chunk.js.LICENSE.txt"
+    "url": "/CoffeeHouse/static/js/2.b1c4ecfc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2a5c4a57cad87e61018a",
-    "url": "/CoffeeHouse/static/js/main.d83addcd.chunk.js"
+    "revision": "f0b1ed754c1fd15939dc",
+    "url": "/CoffeeHouse/static/js/main.143c740c.chunk.js"
   },
   {
     "revision": "516ea5ecd14b6475ab30",
