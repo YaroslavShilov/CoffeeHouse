@@ -4,7 +4,7 @@ import LineCoffee from "../LineCoffee/LineCoffee";
 import Nav from "../Nav/Nav";
 import LinkButton from "../UI/LinkButton/LinkButton";
 
-const HomeSection = () => {
+const HomeSection: React.FC = () => {
   return (
     <section className={s.bg}>
       <div className={s.bg_filter}>

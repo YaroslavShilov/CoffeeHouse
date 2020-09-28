@@ -1,4 +1,8 @@
-import { BestSellers, CoffeeItems, Goods } from "../../types/types";
+import {
+  BestSellersItem,
+  CoffeeItemWithDesc,
+  GoodsItem,
+} from "../../types/types";
 
 export const initialState: InitialStateType = {
   bestsellers: [],
@@ -8,9 +12,9 @@ export const initialState: InitialStateType = {
 };
 
 export type InitialStateType = {
-  bestsellers: BestSellers;
-  coffee: Goods;
-  goods: CoffeeItems;
+  bestsellers: Array<BestSellersItem>;
+  coffee: Array<GoodsItem>;
+  goods: Array<CoffeeItemWithDesc>;
   loading: boolean;
 };
 
@@ -49,7 +53,10 @@ type ActionTypes = ReturnType<InferValueTypes<typeof actions>>;
 export const actions = {
   showLoader: () => ({ type: "SHOW_LOADER" } as const),
   hideLoader: () => ({ type: "HIDE_LOADER" } as const),
-  fetchItems: (category: string, items: CoffeeItems | Goods) =>
+  fetchItems: (
+    category: string,
+    items: Array<CoffeeItemWithDesc> | Array<GoodsItem>
+  ) =>
     ({
       type: "FETCH_ITEMS",
       category,

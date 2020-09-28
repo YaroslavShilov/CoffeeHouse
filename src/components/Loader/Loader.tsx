@@ -4,7 +4,7 @@ import IconCoffee from "./img/coffee.png";
 import IconCup from "./img/cup.png";
 
 type Props = {
-  absolute: boolean;
+  absolute?: boolean;
 };
 
 const Loader: React.FC<Props> = ({ absolute = false }) => {

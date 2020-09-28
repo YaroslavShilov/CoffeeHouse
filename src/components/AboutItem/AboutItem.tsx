@@ -4,16 +4,15 @@ import LineCoffee from "../LineCoffee/LineCoffee";
 import { ServerContext } from "../../context/server/serverContext";
 import Loader from "../Loader/Loader";
 import { Redirect } from "react-router";
-import { CoffeeItem, GoodsItem } from "../../types/types";
+import { CoffeeItemWithDesc, GoodsItem } from "../../types/types";
 
 type Props = {
   url: string;
 };
 
-//TODO add ts//
-
 const AboutItem: React.FC<Props> = ({ url }) => {
-  const [item, setItem] = useState(null);
+  const [item, setItem] = useState<CoffeeItemWithDesc | undefined>();
+  const [isCheck, setIsCheck] = useState(true);
   const { loading, fetchItems, coffee } = useContext(ServerContext);
 
   useEffect(() => {
@@ -27,26 +26,23 @@ const AboutItem: React.FC<Props> = ({ url }) => {
     } else {
       fetchItems("coffee");
     }
+
+    setIsCheck(false);
   }, [coffee, setItem, url, fetchItems]);
 
-  if (!item) return <Redirect to={"/page404"} />;
+  if (!item && !isCheck && !loading) return <Redirect to={"/page404"} />;
 
   return (
     <section className={s.aboutit}>
       <div className="wrap">
-        {/*{loading ? <Loader /> : <MainContent name={item.name} />}*/}
+        {!loading && item ? <MainContent item={item} /> : <Loader />}
       </div>
     </section>
   );
 };
 
-const MainContent: React.FC<CoffeeItem> = ({
-  name,
-  country,
-  url,
-  price,
-  description,
-}) => {
+const MainContent: React.FC<{ item: CoffeeItemWithDesc }> = ({ item }) => {
+  const { name, country, url, price, description } = item;
   return (
     <div className={s.main}>
       <div className={s.img}>
