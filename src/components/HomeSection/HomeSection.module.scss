@@ -2,6 +2,9 @@
 .bg {
 	background: fixed url("img/bg.jpg") center center no-repeat;
 	background-size: cover;
+	&_filter {
+		background-color: rgba(#000, .5);
+	}
 }
 .main {
 	position: relative;
