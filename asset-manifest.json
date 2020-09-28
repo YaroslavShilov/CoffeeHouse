@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/CoffeeHouse/static/css/main.2a50a859.chunk.css",
-    "main.js": "/CoffeeHouse/static/js/main.886c9247.chunk.js",
-    "main.js.map": "/CoffeeHouse/static/js/main.886c9247.chunk.js.map",
+    "main.css": "/CoffeeHouse/static/css/main.3c3e5065.chunk.css",
+    "main.js": "/CoffeeHouse/static/js/main.d83addcd.chunk.js",
+    "main.js.map": "/CoffeeHouse/static/js/main.d83addcd.chunk.js.map",
     "runtime-main.js": "/CoffeeHouse/static/js/runtime-main.9f0bb6fa.js",
     "runtime-main.js.map": "/CoffeeHouse/static/js/runtime-main.9f0bb6fa.js.map",
-    "static/js/2.8fed54d7.chunk.js": "/CoffeeHouse/static/js/2.8fed54d7.chunk.js",
-    "static/js/2.8fed54d7.chunk.js.map": "/CoffeeHouse/static/js/2.8fed54d7.chunk.js.map",
+    "static/js/2.334fc1c9.chunk.js": "/CoffeeHouse/static/js/2.334fc1c9.chunk.js",
+    "static/js/2.334fc1c9.chunk.js.map": "/CoffeeHouse/static/js/2.334fc1c9.chunk.js.map",
     "index.html": "/CoffeeHouse/index.html",
-    "precache-manifest.c73ee1fc26ffa5aa4ca76644911ab9d6.js": "/CoffeeHouse/precache-manifest.c73ee1fc26ffa5aa4ca76644911ab9d6.js",
+    "precache-manifest.d46daf0a34bcfa579fda8a05fdd74859.js": "/CoffeeHouse/precache-manifest.d46daf0a34bcfa579fda8a05fdd74859.js",
     "service-worker.js": "/CoffeeHouse/service-worker.js",
-    "static/css/main.2a50a859.chunk.css.map": "/CoffeeHouse/static/css/main.2a50a859.chunk.css.map",
-    "static/js/2.8fed54d7.chunk.js.LICENSE.txt": "/CoffeeHouse/static/js/2.8fed54d7.chunk.js.LICENSE.txt",
+    "static/css/main.3c3e5065.chunk.css.map": "/CoffeeHouse/static/css/main.3c3e5065.chunk.css.map",
+    "static/js/2.334fc1c9.chunk.js.LICENSE.txt": "/CoffeeHouse/static/js/2.334fc1c9.chunk.js.LICENSE.txt",
     "static/media/404.jpg": "/CoffeeHouse/static/media/404.a6ba70aa.jpg",
     "static/media/index.scss": "/CoffeeHouse/static/media/Merienda-Regular.47a69df0.ttf",
     "static/media/aboutOurBeans.jpg": "/CoffeeHouse/static/media/aboutOurBeans.c8b9f1eb.jpg",
     "static/media/aboutOurGoods.jpg": "/CoffeeHouse/static/media/aboutOurGoods.b030a81d.jpg",
-    "static/media/HomeSection.module.scss": "/CoffeeHouse/static/media/bg.59731da7.jpg",
+    "static/media/HomeSection.module.scss": "/CoffeeHouse/static/media/bg.50d1a75c.jpg",
     "static/media/Best.module.scss": "/CoffeeHouse/static/media/bg.b69bd070.jpg",
     "static/media/bg.jpg": "/CoffeeHouse/static/media/bg.d4775bf3.jpg",
     "static/media/pleasurePage.jpg": "/CoffeeHouse/static/media/pleasurePage.fdf0f46a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9f0bb6fa.js",
-    "static/js/2.8fed54d7.chunk.js",
-    "static/css/main.2a50a859.chunk.css",
-    "static/js/main.886c9247.chunk.js"
+    "static/js/2.334fc1c9.chunk.js",
+    "static/css/main.3c3e5065.chunk.css",
+    "static/js/main.d83addcd.chunk.js"
   ]
 }
