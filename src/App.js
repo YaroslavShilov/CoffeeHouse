@@ -6,8 +6,6 @@ import { HashRouter } from "react-router-dom";
 import ServerState from "./context/server/ServerState";
 
 const App = () => {
-  console.log("reload");
-
   return (
     <ServerState>
       <HashRouter>

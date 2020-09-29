@@ -1,3 +1,10 @@
 import { createContext } from "react";
+import { initialState, InitialStateType } from "./reducer";
+import { FetchItemsType } from "./ServerState";
 
-export const ServerContext = createContext<any>({});
+type Context = InitialStateType & { fetchItems: FetchItemsType };
+
+export const ServerContext = createContext<Context>({
+  ...initialState,
+  fetchItems: async (category) => {},
+});

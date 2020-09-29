@@ -1,9 +1,10 @@
 import React from "react";
 import s from "./Item.module.scss";
 import { Link } from "react-router-dom";
-import { CoffeeItem } from "../../../../types/types";
+import { CoffeeItem, GoodsItem } from "../../../../types/types";
 
-type Props = CoffeeItem & {
+type Props = (CoffeeItem | GoodsItem) & {
+  country?: string;
   isLink?: boolean;
 };
 

@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from "react";
 import Header from "../components/Header/Header";
 import AboutSection from "../components/AboutSection/AboutSection";
 import AboutOurBeans from "../img/aboutOurBeans.jpg";
-import Goods from "../components/Goods/Goods";
 import { ServerContext } from "../context/server/serverContext";
 import Preloader from "../components/Preloader/Preloader";
+import GoodsWithFilter from "../components/Goods/GoodsWithFilter";
 
 const OurCoffee: React.FC = () => {
   const { loading, fetchItems, coffee } = useContext(ServerContext);
@@ -31,7 +31,7 @@ const OurCoffee: React.FC = () => {
           answered followed. At it went is song that held help face.
         </p>
       </AboutSection>
-      <Goods isFilter isLink list={coffee} loading={loading} />
+      <GoodsWithFilter isLink list={coffee} loading={loading} />
     </Preloader>
   );
 };

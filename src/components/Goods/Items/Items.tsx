@@ -2,10 +2,10 @@ import React from "react";
 import s from "./Items.module.scss";
 import Item from "./Item/Item";
 import nextId from "react-id-generator";
-import { CoffeeItem } from "../../../types/types";
+import { CoffeeItem, GoodsItem } from "../../../types/types";
 
 type Props = {
-  list: Array<CoffeeItem>;
+  list: Array<(CoffeeItem | GoodsItem) & { country?: string }>;
   isLink?: boolean;
 };
 

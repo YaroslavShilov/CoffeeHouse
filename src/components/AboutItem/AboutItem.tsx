@@ -4,7 +4,7 @@ import LineCoffee from "../LineCoffee/LineCoffee";
 import { ServerContext } from "../../context/server/serverContext";
 import Loader from "../Loader/Loader";
 import { Redirect } from "react-router";
-import { CoffeeItemWithDesc, GoodsItem } from "../../types/types";
+import { CoffeeItemWithDesc } from "../../types/types";
 
 type Props = {
   url: string;
@@ -16,9 +16,9 @@ const AboutItem: React.FC<Props> = ({ url }) => {
   const { loading, fetchItems, coffee } = useContext(ServerContext);
 
   useEffect(() => {
-    if (coffee.length > 0) {
+    if (coffee && coffee.length > 0) {
       setItem(
-        coffee.find((item: GoodsItem) => {
+        coffee.find((item: CoffeeItemWithDesc) => {
           const convertName = item.name.toLowerCase().replace(/\s+/g, "");
           return url === convertName;
         })

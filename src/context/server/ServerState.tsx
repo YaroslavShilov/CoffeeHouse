@@ -1,14 +1,21 @@
 import React, { useCallback, useReducer } from "react";
 import { URL } from "../../API/API";
-import { initialState, reducer } from "./reducer";
+import {
+  ActionTypes,
+  initialState,
+  InitialStateType,
+  reducer,
+} from "./reducer";
 import { actions } from "./reducer";
 import { ServerContext } from "./serverContext";
 
 export type Category = "bestsellers" | "coffee" | "goods";
-export type FetchItemsType = (category: Category) => Promise<any>;
+export type FetchItemsType = (category: Category) => Promise<void>;
 
 const ServerState: React.FC<React.ReactNode> = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer<
+    React.Reducer<InitialStateType, ActionTypes>
+  >(reducer, initialState);
 
   const fetchItems: FetchItemsType = useCallback(async (category) => {
     //check: have you ever have this "category" items?

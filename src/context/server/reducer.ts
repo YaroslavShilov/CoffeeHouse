@@ -13,8 +13,8 @@ export const initialState: InitialStateType = {
 
 export type InitialStateType = {
   bestsellers: Array<BestSellersItem>;
-  coffee: Array<GoodsItem>;
-  goods: Array<CoffeeItemWithDesc>;
+  coffee: Array<CoffeeItemWithDesc>;
+  goods: Array<GoodsItem>;
   loading: boolean;
 };
 
@@ -48,7 +48,7 @@ export const reducer = (
 
 type InferValueTypes<T> = T extends { [key: string]: infer U } ? U : never;
 
-type ActionTypes = ReturnType<InferValueTypes<typeof actions>>;
+export type ActionTypes = ReturnType<InferValueTypes<typeof actions>>;
 
 export const actions = {
   showLoader: () => ({ type: "SHOW_LOADER" } as const),
