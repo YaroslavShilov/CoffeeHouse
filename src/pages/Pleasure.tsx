@@ -4,11 +4,11 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import PleasureImg from "../img/pleasurePage.jpg";
 import AboutOurGoods from "../img/aboutOurGoods.jpg";
 import Goods from "../components/Goods/Goods";
-import { ServerContext } from "../context/server/serverContext";
+import {ServerContext, useSeverContext} from "../context/server/serverContext";
 import Preloader from "../components/Preloader/Preloader";
 
 const Pleasure: React.FC = () => {
-  const { fetchItems, goods, loading } = useContext(ServerContext);
+  const { fetchItems, goods, loading } = useSeverContext();
 
   useEffect(() => {
     fetchItems("goods");

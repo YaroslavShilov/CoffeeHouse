@@ -2,12 +2,12 @@ import React, { useContext, useEffect } from "react";
 import Header from "../components/Header/Header";
 import AboutSection from "../components/AboutSection/AboutSection";
 import AboutOurBeans from "../img/aboutOurBeans.jpg";
-import { ServerContext } from "../context/server/serverContext";
+import {ServerContext, useSeverContext} from "../context/server/serverContext";
 import Preloader from "../components/Preloader/Preloader";
 import GoodsWithFilter from "../components/Goods/GoodsWithFilter";
 
 const OurCoffee: React.FC = () => {
-  const { loading, fetchItems, coffee } = useContext(ServerContext);
+  const { loading, fetchItems, coffee } = useSeverContext();
 
   useEffect(() => {
     fetchItems("coffee");

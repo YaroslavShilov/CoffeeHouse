@@ -2,12 +2,12 @@ import React, { useContext, useEffect } from "react";
 import s from "./Best.module.scss";
 import BestItem from "./BestItem/BestItem";
 import nextId from "react-id-generator";
-import { ServerContext } from "../../context/server/serverContext";
+import {ServerContext, useSeverContext} from "../../context/server/serverContext";
 import Loader from "../Loader/Loader";
 import { BestSellersItem } from "../../types/types";
 
 const Best = () => {
-  const { loading, fetchItems, bestsellers } = useContext(ServerContext);
+  const { loading, fetchItems, bestsellers } = useSeverContext();
 
   useEffect(() => {
     fetchItems("bestsellers");

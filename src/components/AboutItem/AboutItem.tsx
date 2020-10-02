@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import s from "./AboutItem.module.scss";
 import LineCoffee from "../LineCoffee/LineCoffee";
-import { ServerContext } from "../../context/server/serverContext";
+import {ServerContext, useSeverContext} from "../../context/server/serverContext";
 import Loader from "../Loader/Loader";
 import { Redirect } from "react-router";
 import { CoffeeItemWithDesc } from "../../types/types";
@@ -13,7 +13,7 @@ type Props = {
 const AboutItem: React.FC<Props> = ({ url }) => {
   const [item, setItem] = useState<CoffeeItemWithDesc | undefined>();
   const [isCheck, setIsCheck] = useState(true);
-  const { loading, fetchItems, coffee } = useContext(ServerContext);
+  const { loading, fetchItems, coffee } = useSeverContext();
 
   useEffect(() => {
     if (coffee && coffee.length > 0) {
