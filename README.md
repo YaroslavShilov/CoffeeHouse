@@ -3,5 +3,6 @@
 
 Using:
 1. React (only hooks)
-2. TypeScript
-3. Firebase
+2. React Router
+3. TypeScript
+4. Firebase
