@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./AboutItem.module.scss";
 import LineCoffee from "../LineCoffee/LineCoffee";
-import {ServerContext, useSeverContext} from "../../context/server/serverContext";
+import { useSeverContext } from "../../context/server/serverContext";
 import Loader from "../Loader/Loader";
 import { Redirect } from "react-router";
 import { CoffeeItemWithDesc } from "../../types/types";

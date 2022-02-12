@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header/Header";
 import AboutSection from "../components/AboutSection/AboutSection";
 import PleasureImg from "../img/pleasurePage.jpg";
 import AboutOurGoods from "../img/aboutOurGoods.jpg";
 import Goods from "../components/Goods/Goods";
-import {ServerContext, useSeverContext} from "../context/server/serverContext";
+import { useSeverContext } from "../context/server/serverContext";
 import Preloader from "../components/Preloader/Preloader";
 
 const Pleasure: React.FC = () => {

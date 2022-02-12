@@ -5,7 +5,6 @@ import LineCoffee from "../LineCoffee/LineCoffee";
 type Props = {
   title: string;
   img?: string;
-  children: React.ReactNode;
 };
 
 const AboutSection: React.FC<Props> = ({ title, img, children }) => {
@@ -21,7 +20,9 @@ const AboutSection: React.FC<Props> = ({ title, img, children }) => {
 
           <div className={s.cont}>
             <h2 className={`gb-title ${s.title}`}>{title}</h2>
+
             <LineCoffee modif={"__black"} />
+
             <div className={s.desc}>{children}</div>
           </div>
         </div>

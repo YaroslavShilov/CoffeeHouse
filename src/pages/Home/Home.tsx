@@ -1,12 +1,31 @@
 import React from "react";
-import HomeSection from "../components/HomeSection/HomeSection";
-import AboutSection from "../components/AboutSection/AboutSection";
-import Best from "../components/Best/Best";
-import Preloader from "../components/Preloader/Preloader";
+import AboutSection from "../../components/AboutSection/AboutSection";
+import Best from "../../components/Best/Best";
+import Preloader from "../../components/Preloader/Preloader";
+import s from "./Home.module.scss";
+import Nav from "../../components/Nav/Nav";
+import LineCoffee from "../../components/LineCoffee/LineCoffee";
+import LinkButton from "../../components/UI/LinkButton/LinkButton";
 
 const Home: React.FC = () => (
   <Preloader>
-    <HomeSection />
+    <section className={s.bg}>
+      <div className={s.bg_filter}>
+        <div className="wrap">
+          <div className={s.main}>
+            <Nav />
+            <h1 className={s.title}>Everything You Love About Coffee</h1>
+            <LineCoffee />
+            <div className={s.desc}>
+              <p>We makes every day full of energy and taste</p>
+              <p>Want to try our beans?</p>
+            </div>
+            <LinkButton href={"/ourcoffee"}>More</LinkButton>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <AboutSection title={"About Us"}>
       <p>
         Extremity sweetness difficult behaviour he of. On disposal of as

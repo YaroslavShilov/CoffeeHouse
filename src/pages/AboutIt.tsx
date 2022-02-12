@@ -10,13 +10,11 @@ type MatchParams = {
 
 type Props = RouteComponentProps<MatchParams>;
 
-const AboutIt: React.FC<Props> = ({ match }) => {
-  return (
-    <Preloader>
-      <Header title={"Our Coffee"} />
-      <AboutItem url={match.params.name} />
-    </Preloader>
-  );
-};
+const AboutIt: React.FC<Props> = ({ match }) => (
+  <Preloader>
+    <Header title={"Our Coffee"} />
+    <AboutItem url={match.params.name} />
+  </Preloader>
+);
 
 export default AboutIt;

@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header/Header";
 import AboutSection from "../components/AboutSection/AboutSection";
 import AboutOurBeans from "../img/aboutOurBeans.jpg";
-import {ServerContext, useSeverContext} from "../context/server/serverContext";
+import { useSeverContext } from "../context/server/serverContext";
 import Preloader from "../components/Preloader/Preloader";
 import GoodsWithFilter from "../components/Goods/GoodsWithFilter";
 

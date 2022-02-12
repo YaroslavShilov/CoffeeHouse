@@ -7,8 +7,8 @@ type Props = {
   modif?: string;
 };
 
-const Nav: React.FC<Props> = ({ modif = "" }) => (
-  <nav className={`${s.nav} ${s[modif]}`}>
+const Nav: React.FC<Props> = ({ modif }) => (
+  <nav className={`${s.nav} ${modif ? s[modif] : ""}`}>
     <ul className={s.list}>
       <li className={s.item}>
         <Link to={`/`}>

@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import s from "./Best.module.scss";
 import BestItem from "./BestItem/BestItem";
 import nextId from "react-id-generator";
-import {ServerContext, useSeverContext} from "../../context/server/serverContext";
+import { useSeverContext } from "../../context/server/serverContext";
 import Loader from "../Loader/Loader";
-import { BestSellersItem } from "../../types/types";
 
 const Best = () => {
   const { loading, fetchItems, bestsellers } = useSeverContext();
@@ -13,19 +12,14 @@ const Best = () => {
     fetchItems("bestsellers");
   }, [fetchItems]);
 
-  const items = bestsellers.map((item: BestSellersItem) => (
-    <BestItem
-      key={nextId()}
-      img={item.url}
-      name={item.name}
-      price={item.price}
-    />
+  const items = bestsellers.map(({ url, name, price }) => (
+    <BestItem key={nextId()} img={url} name={name} price={price} />
   ));
 
   return (
     <section className={s.best}>
       <div className="wrap">
-        <h2 className={`gb-title`}>Our best</h2>
+        <h2 className="gb-title">Our best</h2>
         {loading ? <Loader /> : <ul className={s.items}>{items}</ul>}
       </div>
     </section>
